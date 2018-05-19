@@ -1,0 +1,20 @@
+Refactoring Iteration 3
+Tyler Law
+CSCI 3081
+
+Class: Arena.cc, Arena.h
+Method: UpdateEntitiesTimestep
+
+The entire method UpdateEntitiesTimestep was partitioned into new function calls.
+The methods UpdateHungerTimers, HandleCollisions, UpdateSensorPositions and
+UpdateSensorReadings are new and contain subroutines which used to be used as
+in-line code in the method UpdateEntitiesTimestep, but are now called as functions
+instead.  I changed the order of the subroutines a little bit in order to organize
+them in a more logical way.
+
+I chose this refactoring because the method UpdateEntitiesTimestep used to be
+one of the longest methods in the entire code base, and because it is the
+update loop for everything in the simulation.  It contained several functionally
+distinct sections of code that could be quickly and easily contained within
+their own functions with no parameters and no return value.  The end result is a
+short, readable and easily understood update loop.
