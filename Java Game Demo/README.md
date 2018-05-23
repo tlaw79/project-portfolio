@@ -4,20 +4,20 @@ Created by David Kozloff and Tyler Law - 2017
 
 Controls:
 
-W - Move up\n
-A - Move left\n
-S - Move down\n
-D - Move right\n
+W - Move up<br>
+A - Move left<br>
+S - Move down<br>
+D - Move right<br>
 
-Left arrow - Shoot left\n
-Right arrow - Shoot right\n
-Up arrow - Shoot up\n
-Down arrow - Shoot down\n
+Left arrow - Shoot left<br>
+Right arrow - Shoot right<br>
+Up arrow - Shoot up<br>
+Down arrow - Shoot down<br>
 
-Q - Switch to previous weapon\n
-E - Switch to next weapon\n
+Q - Switch to previous weapon<br>
+E - Switch to next weapon<br>
 
-1 - Pistol\n
-2 - Machine gun\n
-3 - Shotgun\n
+1 - Pistol<br>
+2 - Machine gun<br>
+3 - Shotgun<br>
 4 - Flamethrower
