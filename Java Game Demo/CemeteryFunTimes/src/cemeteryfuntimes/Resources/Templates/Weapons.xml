@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML weapon template
+    This template contains the base properties of an ingame weapon.
+    
+    <Weapon Key="1" Unique ID that is used to look up the weapon
+        Name="Pistol" Name of the weapon
+        ProjectileType="1" Type of weapon:
+                                1 - Regular linear ballistic (i.e. pistol, machine gun, sniper)
+                                2 - Singlular ballistic (i.e. flamethrower, laser)
+        Damage="1" Damage per projectile, or damage per timestep
+        EnemyWeapon="True" True if this weapon is for enemies and not the player
+        WeaponLength="20" Length of the weapon (maybe used to draw projectiles?
+        ProjectileSpeed="5" Speed of the projectiles
+        ProjectileDelay="300" Minimum time between firing of the projectiles
+        ProjectileOffset="20" Drawing offset for projectiles (i.e. weapon is slightly to the left of character
+        ProjectileHeight="20" Height of the projectile
+        ProjectileWidth="10" Width of the projectile
+        ProjectileSpread="20" Angular spread of projectiles
+        PlayerImage="Player/PlayerWithHandgun/player.png" Filepath for the image of the player holding the weapon
+        ProjectileImage="Weapons/Handgun/bullet.png" Filepath for the image of the projectile
+        
+        -More will be added especially with weirder weapon types
+        -But my plan is that the use of these variables will be conditional on the weapon type
+        -So its fine to leave certain fields empty or not included on certain weapon types
+    />
+-->
+<Weapons>
+    <Weapon Key="1" 
+        Name="Pistol" 
+        Type="1"
+        Damage="1" 
+        EnemyWeapon="False"
+        WeaponLength="20"
+        ProjectileSpeed="13"
+        ProjectileDelay="300"
+        ProjectileOffset="20"
+        ProjectileHeight="20"
+        ProjectileWidth="10"
+        ProjectileSpread="0"
+        PlayerImage="Player/PlayerWithHandgun/player.png"
+        ProjectileImage="Weapons/Handgun/bullet.png"
+    />
+    <Weapon Key="2"
+        Name="Machinegun"
+        Type="1"
+        Damage="0.8"
+        EnemyWeapon="False"
+        WeaponLength="20"
+        ProjectileSpeed="9"
+        ProjectileDelay="100"
+        ProjectileOffset="28"
+        ProjectileHeight="20"
+        ProjectileWidth="10"
+        ProjectileSpread="8"
+        PlayerImage="Player/PlayerWithHandgun/player.png"
+        ProjectileImage="Weapons/Handgun/bullet.png"
+    />
+    <Weapon Key="3"
+        Name="Shotgun"
+        Type="1"
+        Damage="0.4"
+        EnemyWeapon="False"
+        WeaponLength="20"
+        ProjectileSpeed="11"
+        ProjectileDelay="450"
+        ProjectileOffset="28"
+        ProjectileHeight="20"
+        ProjectileWidth="10"
+        ProjectileSpread="8"
+        PlayerImage="Player/PlayerWithFlamethrower/player.png"
+        ProjectileImage="Weapons/Handgun/bullet.png"
+    />
+    <Weapon Key="5" 
+        Name="Flamethrower" 
+        Type="2"
+        Damage="0.06"
+        EnemyWeapon="False"
+        WeaponLength="20"
+        ProjectileOffset="20"
+        ProjectileHeight="200"
+        ProjectileWidth="50"
+        PlayerImage="Player/PlayerWithFlamethrower/player.png"
+        ProjectileImage="Weapons/Flamethrower/flame.png"
+    />
+    <Weapon Key="6" 
+        Name="Laser" 
+        Type="2"
+        Damage=".01" 
+        EnemyWeapon="False"
+        WeaponLength="20"
+        ProjectileOffset="20"
+        ProjectileHeight="1000"
+        ProjectileWidth="15"
+        PlayerImage="Player/PlayerWithFlamethrower/player.png"
+        ProjectileImage="Weapons/Laser/laserbeam.png"
+    />
+    <Weapon Key="20"
+        Name="Bloater Ball"
+        Type="1"
+        Damage="1"
+        EnemyWeapon="True"
+        WeaponLength="20"
+        ProjectileSpeed="2"
+        ProjectileDelay="1000"
+        ProjectileOffset="28"
+        ProjectileHeight="20"
+        ProjectileWidth="20"
+        ProjectileSpread="0"
+        ProjectileImage="Weapons/BloaterBall/ball.png"
+    />
+    <Weapon Key="21"
+        Name="Fire Ball"
+        Type="1"
+        Damage="4"
+        EnemyWeapon="True"
+        WeaponLength="20"
+        ProjectileSpeed="3"
+        ProjectileDelay="3000"
+        ProjectileOffset="28"
+        ProjectileHeight="95"
+        ProjectileWidth="95"
+        ProjectileSpread="5"
+        ProjectileImage="Weapons/Fireball/fireball.png"
+    />
+    <Weapon Key="22"
+        Name="Spike Ball"
+        Type="3"
+        Damage="2"
+        EnemyWeapon="True"
+        WeaponLength="0"
+        ProjectileSpeed="2"
+        ProjectileDelay="3000"
+        ProjectileOffset="0"
+        ProjectileHeight="40"
+        ProjectileWidth="40"
+        ProjectileSpread="0"
+        NumberOfProjectiles="8"
+        ProjectileImage="Weapons/SpikeBall/spikeball.png"
+    />
+    <Weapon Key="23"
+        Name="Fire Bat"
+        Type="3"
+        Damage="1"
+        EnemyWeapon="True"
+        WeaponLength="0"
+        ProjectileSpeed="1.5"
+        ProjectileDelay="1700"
+        ProjectileOffset="0"
+        ProjectileHeight="40"
+        ProjectileWidth="40"
+        ProjectileSpread="0"
+        NumberOfProjectiles="5"
+        ProjectileImage="Weapons/FireBat/firebat.png"
+    />
+    <Weapon Key="24"
+        Name="Ghoulie1"
+        Type="3"
+        Damage="1"
+        EnemyWeapon="True"
+        WeaponLength="0"
+        ProjectileSpeed="5"
+        ProjectileDelay="550"
+        ProjectileOffset="0"
+        ProjectileHeight="30"
+        ProjectileWidth="30"
+        ProjectileSpread="0"
+        NumberOfProjectiles="9"
+        ProjectileImage="Weapons/BloaterBall/ball2.png"
+    />
+    <Weapon Key="25"
+        Name="Ghoulie2"
+        Type="3"
+        Damage="1"
+        EnemyWeapon="True"
+        WeaponLength="0"
+        ProjectileSpeed="5"
+        ProjectileDelay="100"
+        ProjectileOffset="0"
+        ProjectileHeight="30"
+        ProjectileWidth="30"
+        ProjectileSpread="14"
+        NumberOfProjectiles="9"
+        ProjectileImage="Weapons/BloaterBall/ball2.png"
+    />
+    <Weapon Key="26"
+        Name="Ghoulie3"
+        Type="3"
+        Damage="1"
+        EnemyWeapon="True"
+        WeaponLength="0"
+        ProjectileSpeed="11"
+        ProjectileDelay="500"
+        ProjectileOffset="0"
+        ProjectileHeight="30"
+        ProjectileWidth="30"
+        ProjectileSpread="0"
+        NumberOfProjectiles="7"
+        ProjectileImage="Weapons/BloaterBall/ball2.png"
+    />
+</Weapons>
