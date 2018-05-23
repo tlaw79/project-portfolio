@@ -1,6 +1,6 @@
-<center><b><h3>Robot Simulation</h3></b></center>
+<center><b><h1>Robot Simulation</h1></b></center>
 
-<center><b>Tyler Law, UMN CSCI 3081 staff and Dan Keefe - 2018</b></center>
+<center>Tyler Law, UMN CSCI 3081 staff and Dan Keefe - 2018</center>
 
 <center><b><h2>Overview</h2></b></center>
 
