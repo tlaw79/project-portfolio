@@ -1,7 +1,7 @@
 <center><b><h1>Robot Simulation</h1></b></center>
 
 <center>Created by Tyler Law - 2018<center><br>
-<center>Base code from UMN CSCI 3081 staff and Dan Keefe</center>
+<center>Base code by UMN CSCI 3081 staff and Dan Keefe</center>
 
 <center><b><h2>Overview</h2></b></center>
 
