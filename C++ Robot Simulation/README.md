@@ -1,16 +1,16 @@
 <center><b><h2>Overview</h2></b></center>
 
-<center><b>Robot Simulation</b></center>
+<center><b>Robot Simulation</b></center><br>
 
 This software is a 2D graphical simulation of autonomous robots moving in an arena and interacting with two types of stimuli: food and lights. This simulation is written in C++ and uses the MinGfx graphics library with base code written by CSCI 3081 staff and Dan Keefe. The movement of robots and lights is modeled using differential drive, meaning all objects move and turn by changing the velocities of their two wheels. Robots also move according to the Braitenberg vehicle model (discussed in further detail in the Braitenberg Vehicles section). Robots and lights back up in an arc for a short period of time after a collision.
 
-<center><b>Graphical User Interface</b></center>
+<center><b>Graphical User Interface</b></center><br>
 
 A graphical user interface allows the user to configure simulation parameters as well as pause and restart the simulation. The arena is reconfigured to reflect the user's configuration whenever the user restarts the simulation. The initial positions of all entities are randomized whenever the user starts or restarts the simulation. More details on the GUI are provided in the User Guide section.
 
 <center><b><h2>Design and Implementation</h2></b></center>
 
-<center><b>Braitenberg Vehicles</b></center>
+<center><b>Braitenberg Vehicles</b></center><br>
 
 In the Braitenberg vehicle model, a robot has two sensors on each side (in this simulation, 40 and -40 degrees from its heading) that detect how close that sensor is to a certain stimuli. As a sensor value gets larger, it can either increase or decrease the velocity of a wheel, and it can affect the velocity of either the left wheel or the right wheel. This results in four simple types of movement which resemble the behaviors fear, aggression, love and explore (this simulation currently only implements the behaviors fear, aggression and explore):
 
@@ -24,21 +24,21 @@ Explore decreases wheel velocities when sensor readings increase, where sensors 
 
 Robots can either fear or explore lights. The user can specify the ratio of robots that fear lights to robots that explore lights. Thirty seconds after the simulation starts or restarts, robots become hungry and become aggressive toward food. If a robot comes within five pixels of food, it is no longer hungry and is no longer aggressive toward food, but it will become hungry again after thirty seconds. If a robot has gone two minutes without eating, it will stop fearing or exploring lights and only act aggressively toward food. If a robot has gone two and a half minutes without eating, the simulation will stop and the user will be given the option to restart the simulation.
 
-<center><b>Model-View-Controller</b></center>
+<center><b>Model-View-Controller</b></center><br>
 
 This simulation uses the Model-view-controller paradigm, meaning the code for the data model, its visual representation and user input is separated into their own classes. The controller handles both user input and communication between the model and the view. The model is arena.cc, the view is graphics_arena_viewer.cc and the controller is controller.cc.
 
-<center><b>Factory Method Pattern</b></center>
+<center><b>Factory Method Pattern</b></center><br>
 
 The class entity_factory.cc handles the creation of arena objects: robots, lights, food and sensors. The factory returns a pointer to an object in arena.cc, and arena.cc adds the object to the entity vector and the mobile entity vector subset if the object is a mobile entity. These collections are used to access every object in the arena.
 
-<center><b>Observer Pattern</b></center>
+<center><b>Observer Pattern</b></center><br>
 
 Robots (observers) poll sensors (subjects) every update iteration to receive the latest reading for each of its sensors. Each robot passes that information to its motion_handler_robot.cc, which will update the robot's wheel velocities according to the robot's sensor values and the Braitenberg movement strategies the robot uses (fear, aggression, love, explore). The robot then updates its position and heading, represented as a struct in pose.h, according to its wheel velocities and the differential drive model in motion_behavior_differential.cc.
 
 This implementation of the Observer Pattern minimizes coupling between robots and their sensors since sensors don't need to maintain references to their robot. This is beneficial because future changes to robot code won't require additional changes to sensor code. The trade-off of this implementation is the need to constantly poll for sensor readings, potentially wasting CPU cycles if the sensor readings don't change between update iterations. Since the simulation scale is small and computationally inexpensive, and because robots tend to be moving most of the time anyway, this trade-off was acceptable.
 
-<center><b>Strategy Pattern</b></center>
+<center><b>Strategy Pattern</b></center><br>
 
 The Strategy Pattern is used to allow client code to quickly and easily switch between different movement behaviors for each robot. A movement strategy interface defines method signatures that are implemented by concrete strategy classes, including the fear, aggression and explore movement strategies used by Braitenberg vehicles. These concrete strategy classes calculate wheel velocities based on robot sensor readings and the specified movement strategy.
 
@@ -46,7 +46,7 @@ Using the Strategy Pattern takes advantage of dynamic polymorphism by allowing d
 
 <center><b><h2>User Guide</h2></b></center>
 
-<center><b>Linux Guide</b></center>
+<center><b>Linux Guide</b></center><br>
 
 1) Download and extract project files.<br>
 2) Navigate to the src directory.<br>
@@ -54,7 +54,7 @@ Using the Strategy Pattern takes advantage of dynamic polymorphism by allowing d
 4) Enter the following command: make<br>
 5) Enter the following command: ./../build/bin/arenaviewer
 
-<center><b>User Controls</b></center>
+<center><b>User Controls</b></center><br>
 
 NOTE: You must press the New Game button for your setting changes to take effect.
 
