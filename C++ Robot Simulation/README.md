@@ -1,8 +1,12 @@
+<center><b><h3>Robot Simulation</h3></b></center>
+
+<center><b>Tyler Law, UMN CSCI 3081 staff and Dan Keefe - 2018</b></center>
+
 <center><b><h2>Overview</h2></b></center>
 
 <center><b>Robot Simulation</b></center><br><br>
 
-This software is a 2D graphical simulation of autonomous robots moving in an arena and interacting with two types of stimuli: food and lights. This simulation is written in C++ and uses the MinGfx graphics library with base code written by CSCI 3081 staff and Dan Keefe. The movement of robots and lights is modeled using differential drive, meaning all objects move and turn by changing the velocities of their two wheels. Robots also move according to the Braitenberg vehicle model (discussed in further detail in the Braitenberg Vehicles section). Robots and lights back up in an arc for a short period of time after a collision.
+This software is a 2D graphical simulation of autonomous robots moving in an arena and interacting with two types of stimuli: food and lights. This simulation was programmed in C++ by Tyler Law and uses the MinGfx graphics library with base code written by UMN CSCI 3081 staff and Dan Keefe. The movement of robots and lights is modeled using differential drive, meaning all objects move and turn by changing the velocities of their two wheels. Robots also move according to the Braitenberg vehicle model (discussed in further detail in the Braitenberg Vehicles section). Robots and lights back up in an arc for a short period of time after a collision.
 
 <center><b>Graphical User Interface</b></center><br><br>
 
